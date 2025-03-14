@@ -66,38 +66,84 @@
                                 <p for="escuela">Escuela:</p>
                             </div>
                             <div class="mt-3 text-center">
-                                 <a href="" class="btn bg-body-custom text-white">Modificar</a>
+                                 <a href="" class="btn bg-body-custom text-white" id="modify-info" data-toggle="modal" data-target="#modifyModal">Modificar</a>
                                 <a href="" class="btn bg-body-custom text-white">Cancelar</a>
                             </div>
                         </div>
                     </div>
                 </div>
+                
+                <!-- Datos Cursos -->
                 <div class="col-md-6">
                     <div class="card">
-                        <div class="card-header bg-body-custom text-white">Datos Cursos</div>
+                        <div class="card-header bg-body-custom text-white">Cursos Disponibles</div>
                         <div class="card-body">
-                            <table class="table table-bordered text-center" id="notas">
+                            <table class="table table-bordered text-center">
                                 <thead class="bg-body-custom text-white">
                                     <tr>
-                                        <th>Fecha Inicio</th>
-                                        <th>Fecha Finalización</th>
                                         <th>Curso</th>
-                                        <th>Estado</th>
-                                        <th>Nota</th>
+                                        <th>Día</th>
+                                        <th>Hora</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                        <tr>
-                                                <td colspan="4">No hay datos disponibles</td>
-                                            </tr>
+                                    <tr>
+                                        <td>Programación Básica</td>
+                                        <td>Martes</td>
+                                        <td>7:00 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Administración de Proyectos</td>
+                                        <td>Jueves</td>
+                                        <td>3:00 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ambiente Web/Cliente Servidor</td>
+                                        <td>Lunes</td>
+                                        <td>8:00 PM</td>
+                                    </tr>
                                 </tbody>
                             </table>
                             <div class="mt-3 text-center">
                                 <a href="" class="btn bg-body-custom text-white">Agregar</a>
                                 <a href="" class="btn bg-body-custom text-white">Cancelar</a>
                             </div>
-
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal para Modificar Información -->
+        <div class="modal fade" id="modifyModal" tabindex="-1" role="dialog" aria-labelledby="modifyModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modifyModalLabel">Modificar Información</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="modify-form">
+                            <div class="form-group">
+                                <label for="name">Nombre:</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Correo Electrónico:</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Teléfono:</label>
+                                <input type="text" class="form-control" id="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Nueva Contraseña:</label>
+                                <input type="password" class="form-control" id="password">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                        </form>
                     </div>
                 </div>
             </div>

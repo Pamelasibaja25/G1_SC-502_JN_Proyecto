@@ -19,3 +19,12 @@ section.bg-custom {
     color: rgba(1, 38, 71) !important;
     background-color: transparent !important;
 }
+
+
+#login-container {
+    max-width: 400px;
+}
+
+#main-content {
+    display: none;
+}
