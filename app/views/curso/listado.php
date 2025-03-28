@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link href="../css/style.css" rel="stylesheet" type="text/css" />
+    <link href="/G1_SC-502_JN_Proyecto/public/css/style.css" rel="stylesheet" type="text/css" />
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Popper JS -->
@@ -19,22 +19,25 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-primary">
         <div class="container">
-            <a class="navbar-brand text-white" href="../index.html">Escuela en Casa</a>
+            <a class="navbar-brand text-white" href="../layout.php">Escuela en Casa</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link text-white" href="listado.html">Listado de Cursos</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="registro_matricula.html">Registro de Matrícula</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="listado.php">Listado de Cursos</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="registro_matricula.html">Registro de
+                            Matrícula</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="" role="button"
                             aria-expanded="false">Reportes</a>
 
                         <ul class="dropdown-menu bg-primary">
-                            <li><a class="dropdown-item text-white" href="../nota/reporte_trimestral.html">Reporte Trimestral</a></li>
-                            <li><a class="dropdown-item text-white" href="../nota/reporte_rendimiento.html">Reporte Rendimiento</a></li>
+                            <li><a class="dropdown-item text-white" href="../nota/reporte_trimestral.html">Reporte
+                                    Trimestral</a></li>
+                            <li><a class="dropdown-item text-white" href="../nota/reporte_rendimiento.html">Reporte
+                                    Rendimiento</a></li>
                         </ul>
                     </li>
                     <li class="nav-item"><a class="nav-link text-white" href="../nota/listado.html">Mi Perfil</a></li>
@@ -42,8 +45,7 @@
             </div>
             <ul class="navbar-nav">
                 <li class="nav-item my-auto">
-                    <button class="btn btn-outline-light">Salir</button>
-
+                    <a class="btn btn-outline-light" href="/G1_SC-502_JN_Proyecto/index.php">Salir</a>
                 </li>
             </ul>
         </div>
@@ -51,10 +53,14 @@
 
     <section class="bg-custom" id="cursos">
         <div class="container mt-5">
-            <h1 class="text-center text-white" >Bienvenido</h1>
+            <h1 class="text-center text-white">Bienvenido</h1>
             <h3 class="text-center mb-4 text-white">Cursos En Progreso</h3>
-           
-            </div>
+            <?php
+            // Incluir el archivo de conexión
+            include $_SERVER['DOCUMENT_ROOT'] . '/G1_SC-502_JN_Proyecto/app/controller/cursoController.php';
+            get_cursos();
+            ?>
+        </div>
 
         </div>
     </section>

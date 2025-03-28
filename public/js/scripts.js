@@ -1,9 +1,5 @@
 $(document).ready(function () {
-    $("#login-form").submit(function (event) {
-        event.preventDefault();
-        $("#login-container").hide();
-        $("#main-content").show();
-    });
+
 
     $("#show-register").click(function () {
         $("#register-modal").modal("show");
@@ -14,5 +10,12 @@ $(document).ready(function () {
         alert("Información actualizada correctamente.");
         $("#modifyModal").modal("hide");
     });
+    
 });
+
+document.getElementById("btn-mostrar").addEventListener("click", function() {
+    document.querySelectorAll(".extra-curso").forEach(el => el.classList.remove("d-none"));
+    this.style.display = "none";
+});
+
 
